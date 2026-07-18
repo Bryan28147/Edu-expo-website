@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booth Virtual — Edu Expo SMK Mutiara Bangsa 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="loading-screen"><div class="loader-logo">EDU EXPO 2026</div><div class="loader-ring"></div></div>
+<div id="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="brand-mark">EE</span>Edu Expo SMK MB1</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="about.html">Tentang</a>
+      <a href="projects.html">Karya Siswa</a>
+      <a href="booth.html" class="active">Booth Virtual</a>
+      <a href="gallery.html">Galeri</a>
+      <a href="redeem.html">Redeem Foto</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema">🌙</button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Beranda</a> / Booth Virtual</div>
+    <h1>Booth Virtual Jurusan</h1>
+    <p>Klik salah satu booth untuk menjelajahi profil, karya, dan pencapaian setiap program keahlian.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <div class="card booth-card reveal" data-booth="dkv">
+        <div class="booth-icon">DKV</div>
+        <h3>Desain Komunikasi Visual</h3>
+        <p>Kreativitas visual, branding & ilustrasi digital.</p>
+      </div>
+      <div class="card booth-card reveal reveal-delay-1" data-booth="rpl">
+        <div class="booth-icon">RPL</div>
+        <h3>Rekayasa Perangkat Lunak</h3>
+        <p>Pengembangan aplikasi web & mobile.</p>
+      </div>
+      <div class="card booth-card reveal reveal-delay-2" data-booth="tkj">
+        <div class="booth-icon">TKJ</div>
+        <h3>Teknik Komputer & Jaringan</h3>
+        <p>Infrastruktur jaringan & keamanan siber.</p>
+      </div>
+      <div class="card booth-card reveal" data-booth="akl">
+        <div class="booth-icon">AKL</div>
+        <h3>Akuntansi & Keuangan Lembaga</h3>
+        <p>Laporan keuangan & literasi finansial.</p>
+      </div>
+      <div class="card booth-card reveal reveal-delay-1" data-booth="mplb">
+        <div class="booth-icon">MPLB</div>
+        <h3>Manajemen Perkantoran & Layanan Bisnis</h3>
+        <p>Administrasi & pelayanan bisnis modern.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOTH MODAL (populated dynamically via script.js — no backend) ===== -->
+<div class="modal-overlay" id="booth-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-modal aria-label="Tutup">&times;</button>
+    <div class="modal-head">
+      <div class="modal-logo" id="modal-logo">EE</div>
+      <div>
+        <h3 id="modal-name">Nama Jurusan</h3>
+        <p id="modal-teacher" style="color:var(--text-muted);font-size:.88rem;">Pengampu</p>
+      </div>
+    </div>
+    <p id="modal-desc" style="color:var(--text-muted);margin-bottom:18px;"></p>
+
+    <h4 style="font-size:.95rem;margin-bottom:10px;">Galeri</h4>
+    <div class="modal-gallery" id="modal-gallery"></div>
+
+    <h4 style="font-size:.95rem;margin:18px 0 10px;">Pencapaian</h4>
+    <ul class="modal-list" id="modal-achievements"></ul>
+
+    <h4 style="font-size:.95rem;margin:18px 0 10px;">Proyek Unggulan</h4>
+    <ul class="modal-list" id="modal-projects"></ul>
+
+    <button class="btn btn-primary btn-block" id="modal-more-btn" style="margin-top:22px;">View More Projects</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span class="brand-mark">EE</span>Edu Expo SMK MB1</div><p>Pameran pendidikan tahunan yang merayakan karya, inovasi, dan semangat belajar siswa SMK Mutiara Bangsa 1.</p></div>
+      <div><h4>Jelajahi</h4><ul><li><a href="about.html">Tentang</a></li><li><a href="projects.html">Karya Siswa</a></li><li><a href="booth.html">Booth Virtual</a></li></ul></div>
+      <div><h4>Lainnya</h4><ul><li><a href="gallery.html">Galeri</a></li><li><a href="redeem.html">Redeem Foto</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+      <div><h4>Sekolah</h4><ul><li>SMK Mutiara Bangsa 1</li><li>Jl. Pendidikan No. 1, Tangerang</li></ul></div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 SMK Mutiara Bangsa 1 · Edu Expo. All rights reserved.</div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+<div id="toast-container"></div>
+<script src="../script.js"></script>
+</body>
+</html>

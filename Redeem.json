@@ -1,0 +1,26 @@
+[
+  {
+    "code": "EXPO-7H2K-LP9X",
+    "name": "John Doe",
+    "class": "XI RPL",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"]
+  },
+  {
+    "code": "EXPO-3B7M-QZ4T",
+    "name": "Salsabila Putri",
+    "class": "XI DKV",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"]
+  },
+  {
+    "code": "EXPO-9K2P-RX1V",
+    "name": "Bagas Prasetyo",
+    "class": "XII AKL",
+    "photos": ["photo1.jpg", "photo2.jpg"]
+  },
+  {
+    "code": "EXPO-5D8N-WY6C",
+    "name": "Fikri Alamsyah",
+    "class": "XII TKJ",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"]
+  }
+]

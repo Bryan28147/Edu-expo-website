@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redeem Foto — Edu Expo SMK Mutiara Bangsa 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="loading-screen"><div class="loader-logo">EDU EXPO 2026</div><div class="loader-ring"></div></div>
+<div id="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand"><span class="brand-mark">EE</span>Edu Expo SMK MB1</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="about.html">Tentang</a>
+      <a href="projects.html">Karya Siswa</a>
+      <a href="booth.html">Booth Virtual</a>
+      <a href="gallery.html">Galeri</a>
+      <a href="redeem.html" class="active">Redeem Foto</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema">🌙</button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Beranda</a> / Redeem Foto</div>
+    <h1>Redeem Foto Dokumentasi</h1>
+    <p>Masukkan kode unik yang kamu dapatkan di booth foto untuk mengunduh dokumentasi pribadimu.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container redeem-wrap">
+    <div class="reveal">
+      <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi redeem foto">
+        <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5DADE2"/><stop offset="100%" stop-color="#0F4C81"/></linearGradient></defs>
+        <rect x="60" y="60" width="280" height="200" rx="20" fill="url(#rg)" opacity="0.14"/>
+        <rect x="90" y="90" width="220" height="150" rx="16" fill="#FFFFFF"/>
+        <circle cx="200" cy="150" r="40" fill="#EAF4FF" stroke="#2F80ED" stroke-width="4"/>
+        <path d="M182 150 l14 14 l24 -28" stroke="#0F4C81" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="120" y="205" width="160" height="10" rx="5" fill="#EAF4FF"/>
+        <circle cx="330" cy="90" r="14" fill="#5DADE2"/>
+        <circle cx="70" cy="250" r="10" fill="#2F80ED"/>
+      </svg>
+    </div>
+
+    <div class="redeem-form glass reveal reveal-delay-1">
+      <form id="redeem-form">
+        <label for="redeem-code">Kode Redeem</label>
+        <input type="text" id="redeem-code" class="redeem-input" placeholder="EXPO-7H2K-LP9X" maxlength="20" autocomplete="off" required>
+        <p class="redeem-hint">Contoh format kode: <strong>EXPO-7H2K-LP9X</strong> — cek struk atau layar booth foto kamu.</p>
+        <button type="submit" class="btn btn-primary btn-block" id="redeem-submit">Redeem Sekarang</button>
+      </form>
+
+      <!-- SUCCESS RESULT -->
+      <div class="redeem-result" id="redeem-result">
+        <div class="redeem-profile">
+          <div class="redeem-avatar" id="redeem-initial">A</div>
+          <div>
+            <h3 id="redeem-name">Nama Siswa</h3>
+            <p style="color:var(--text-muted);font-size:.88rem;" id="redeem-class">Kelas</p>
+          </div>
+        </div>
+        <div class="redeem-photos" id="redeem-photo-grid"></div>
+        <div class="redeem-actions">
+          <button class="btn btn-primary btn-sm" id="redeem-download">Download Semua</button>
+          <button class="btn btn-outline btn-sm" id="redeem-share">Bagikan</button>
+        </div>
+      </div>
+
+      <!-- ERROR STATE -->
+      <div class="redeem-error" id="redeem-error">
+        ⚠️ Kode tidak ditemukan. Periksa kembali penulisan kode kamu.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span class="brand-mark">EE</span>Edu Expo SMK MB1</div><p>Pameran pendidikan tahunan yang merayakan karya, inovasi, dan semangat belajar siswa SMK Mutiara Bangsa 1.</p></div>
+      <div><h4>Jelajahi</h4><ul><li><a href="about.html">Tentang</a></li><li><a href="projects.html">Karya Siswa</a></li><li><a href="booth.html">Booth Virtual</a></li></ul></div>
+      <div><h4>Lainnya</h4><ul><li><a href="gallery.html">Galeri</a></li><li><a href="redeem.html">Redeem Foto</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+      <div><h4>Sekolah</h4><ul><li>SMK Mutiara Bangsa 1</li><li>Jl. Pendidikan No. 1, Tangerang</li></ul></div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 SMK Mutiara Bangsa 1 · Edu Expo. All rights reserved.</div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+<div id="toast-container"></div>
+<script src="../script.js"></script>
+</body>
+</html>
