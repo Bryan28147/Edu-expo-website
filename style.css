@@ -425,3 +425,47 @@ h1,h2,h3,h4{ font-family:var(--font-display); color:var(--text-main); line-heigh
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
 }
+
+/* ---------- TAMBAHAN OPTIMASI KHUSUS HP ---------- */
+@media (max-width: 640px) {
+  /* Agar teks judul utama di HP tidak terlalu raksasa */
+  .hero h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+  
+  /* Supaya kotak countdown waktu tidak bertabrakan di layar kecil */
+  .countdown {
+    gap: 8px !important;
+    justify-content: center;
+  }
+  .countdown-box {
+    min-width: 65px !important;
+    padding: 8px !important;
+  }
+  .countdown-box .num {
+    font-size: 1.5rem !important;
+  }
+
+  /* Mencegah gambar dokumentasi/masonry keluar dari layar HP */
+  .masonry {
+    column-count: 1 !important; /* Di HP jadikan 1 kolom saja biar memanjang ke bawah rapi */
+    gap: 16px;
+  }
+  
+  /* Memberikan jarak aman di kanan kiri konten agar tidak mentok layar HP */
+  .container {
+    padding: 0 20px !important;
+  }
+
+  /* Menyesuaikan ukuran tombol di HP agar pas dijempol */
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
